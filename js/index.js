@@ -75,12 +75,21 @@ let bottomTextInfo = document.querySelectorAll('.main-content .bottom-content p'
 bottomTextInfo[0].textContent = siteContent['main-content']['services-content'];
 bottomTextInfo[1].textContent = siteContent['main-content']['product-content'];
 bottomTextInfo[2].textContent = siteContent['main-content']['vision-content'];
-let contact = document.querySelector('.contact');
-contact.innerHTML = `<h4>${siteContent['contact']['contact-h4']}</h4>\n<p>
-<address>${siteContent['contact']['address']}</address></p>\n
-<p><a href="mailto:email@email.com">${siteContent['contact']['phone']}</a></p>\n
-\n<p><a href="tel:555-555-5555">${siteContent['contact']['email']}</a></p>
-`;
+let contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent['contact']['contact-h4']
+let contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
+// let contact = document.querySelector('.contact');
+// contact.innerHTML = `<h4>${siteContent['contact']['contact-h4']}</h4>\n
+// <p>
+// <address>${siteContent['contact']['address']}</address></p>\n
+// <p><a href="mailto:email@email.com">${siteContent['contact']['phone']}</a></p>\n
+// \n<p><a href="tel:555-555-5555">${siteContent['contact']['email']}</a></p>
+// `;
+
+
 let copyright = document.querySelector('footer p');
 copyright.textContent = siteContent['footer']['copyright'];
 // Create the new a tag elements
